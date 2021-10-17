@@ -1,0 +1,100 @@
+// typography setting
+@use "./colors" as color;
+@use "../abstracts";
+
+body {
+  font-family: Libre Baskerville;
+  font-style: normal;
+}
+
+.heading {
+  font-weight: bold;
+  margin-block: 0.5rem;
+
+  &--display {
+    font-size: abstracts.toRem(200);
+    line-height: abstracts.toRem(150);
+    color: color.$neutral-100;
+  }
+
+  &--1 {
+    font-size: abstracts.toRem(56);
+    line-height: abstracts.toRem(64);
+    color: color.$neutral-900;
+  }
+
+  &--2 {
+    font-size: abstracts.toRem(24);
+    line-height: abstracts.toRem(30);
+    color: color.$neutral-900;
+    font-weight: normal;
+  }
+
+  &--3 {
+    font-size: abstracts.toRem(18);
+    line-height: abstracts.toRem(22);
+    color: color.$neutral-900;
+  }
+
+  &--light{
+    color: color.$light;
+  }
+}
+
+.subhead {
+  margin-block: 0rem;
+  color: color.$neutral-900;
+
+  &--1 {
+    font-size: abstracts.toRem(15);
+    line-height: abstracts.toRem(19);
+  }
+
+  &--2 {
+    font-size: abstracts.toRem(13);
+    line-height: abstracts.toRem(16);
+  }
+}
+
+.link {
+  color: color.$neutral-500;
+  text-transform: uppercase;
+  transition: 150ms all ease-in-out;
+  
+  &:hover{
+    color: color.$neutral-900;
+  }
+
+  &--1 {
+    font-weight: bold;
+    font-size: abstracts.toRem(12);
+    line-height: abstracts.toRem(15);
+    letter-spacing: 2.57143px;
+    text-decoration: none;
+  }
+
+  &--2 {
+    font-weight: bold;
+    font-size: abstracts.toRem(9);
+    line-height: abstracts.toRem(11);
+    letter-spacing: 1.92857px;
+    text-decoration-line: underline;
+  }
+}
+
+.paragraph {
+  font-weight: bold;
+  font-size: abstracts.toRem(14);
+  line-height: abstracts.toRem(28);
+  color: color.$neutral-500;
+}
+
+.white{
+  color: color.$light;
+
+  &--opacity{
+    @extend .white;
+    opacity: 0.75;
+  }
+}
+

@@ -1,0 +1,14 @@
+@use '../base';
+@use '../abstracts';
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //padding: 1.5rem;
+    border-bottom: 1px solid base.$neutral-200;
+
+    @include abstracts.breakpoint-up(medium){
+
+    }
+}

@@ -1,0 +1,43 @@
+@use '../abstracts';
+
+*{
+    box-sizing: border-box;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+}
+
+.container{
+
+    &--inline{
+        padding-inline: 1.5rem;
+
+        @include abstracts.breakpoint-up(medium){
+            padding-inline: 2.5rem;
+        }
+    }
+
+    &--block{
+        padding-block: 1.5rem;
+
+        @include abstracts.breakpoint-up(medium){
+            padding-block: abstracts.toRem(29);
+        }
+
+        @include abstracts.breakpoint-up(large){
+            padding-block: 2.5rem;
+            max-width: abstracts.toRem(1440);
+            margin: 0 auto;
+        }
+    
+    }
+
+
+}

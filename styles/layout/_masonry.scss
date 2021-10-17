@@ -1,0 +1,36 @@
+@use "../abstracts";
+
+.grid-item {
+    float: left;
+    max-width: abstracts.toRem(327);
+    height: auto;
+    margin-bottom: 2.5rem;
+    position: relative;
+
+    @include abstracts.breakpoint-up(medium) {
+        max-width: abstracts.toRem(324);
+    }
+
+    @include abstracts.breakpoint-up(large) {
+        max-width: abstracts.toRem(310);
+    }
+
+    &__text{
+       position: absolute;
+       padding: 32px;
+       right: 0;
+       bottom: 0;
+       left: 0;
+       background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.841672) 100%);
+       
+    }
+
+    &__image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.clear {
+    clear: both;
+}
