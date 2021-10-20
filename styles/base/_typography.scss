@@ -12,15 +12,24 @@ body {
   margin-block: 0.5rem;
 
   &--display {
-    font-size: abstracts.toRem(200);
-    line-height: abstracts.toRem(150);
+    font-size: abstracts.toRem(100);
+    line-height: abstracts.toRem(100);
     color: color.$neutral-100;
+    @include abstracts.breakpoint-up(medium){
+      font-size: abstracts.toRem(200);
+      line-height: abstracts.toRem(150);
+    }
   }
 
   &--1 {
-    font-size: abstracts.toRem(56);
-    line-height: abstracts.toRem(64);
+    font-size: abstracts.toRem(24);
+    line-height: abstracts.toRem(29);
     color: color.$neutral-900;
+    @include abstracts.breakpoint-up(medium){
+      font-size: abstracts.toRem(56);
+      line-height: abstracts.toRem(64);
+     
+    }
   }
 
   &--2 {
@@ -31,9 +40,13 @@ body {
   }
 
   &--3 {
-    font-size: abstracts.toRem(18);
-    line-height: abstracts.toRem(22);
+    font-size: abstracts.toRem(14);
+    line-height: abstracts.toRem(17);
     color: color.$neutral-900;
+    @include abstracts.breakpoint-up(medium){
+      font-size: abstracts.toRem(18);
+    line-height: abstracts.toRem(22);
+    }
   }
 
   &--light{
@@ -45,14 +58,19 @@ body {
   margin-block: 0rem;
   color: color.$neutral-900;
 
+  // same for all views
   &--1 {
     font-size: abstracts.toRem(15);
     line-height: abstracts.toRem(19);
   }
 
   &--2 {
-    font-size: abstracts.toRem(13);
-    line-height: abstracts.toRem(16);
+    font-size: abstracts.toRem(10);
+    line-height: abstracts.toRem(12);
+    @include abstracts.breakpoint-up(medium){
+      font-size: abstracts.toRem(13);
+      line-height: abstracts.toRem(16);
+    }
   }
 }
 
@@ -67,10 +85,15 @@ body {
 
   &--1 {
     font-weight: bold;
-    font-size: abstracts.toRem(12);
-    line-height: abstracts.toRem(15);
+    font-size: abstracts.toRem(9);
+    line-height: abstracts.toRem(11);
     letter-spacing: 2.57143px;
     text-decoration: none;
+
+    @include abstracts.breakpoint-up(medium){
+      font-size: abstracts.toRem(12);
+    line-height: abstracts.toRem(15);
+    }
   }
 
   &--2 {

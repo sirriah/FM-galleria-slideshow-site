@@ -5,10 +5,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    //padding: 1.5rem;
     border-bottom: 1px solid base.$neutral-200;
 
     @include abstracts.breakpoint-up(medium){
 
+    }
+
+    &__logo{
+        display: block;
+        width: abstracts.toRem(113);
+        @include abstracts.breakpoint-up(large){
+            width: abstracts.toRem(170);
+        }
     }
 }

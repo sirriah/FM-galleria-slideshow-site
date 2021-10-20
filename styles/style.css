@@ -8,14 +8,26 @@ body {
   margin-block: 0.5rem;
 }
 .heading--display {
-  font-size: 12.5rem;
-  line-height: 9.375rem;
+  font-size: 6.25rem;
+  line-height: 6.25rem;
   color: #f3f3f3;
 }
+@media only screen and (min-width: 40em) {
+  .heading--display {
+    font-size: 12.5rem;
+    line-height: 9.375rem;
+  }
+}
 .heading--1 {
-  font-size: 3.5rem;
-  line-height: 4rem;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
   color: #000;
+}
+@media only screen and (min-width: 40em) {
+  .heading--1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
 }
 .heading--2 {
   font-size: 1.5rem;
@@ -24,9 +36,15 @@ body {
   font-weight: normal;
 }
 .heading--3 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
   color: #000;
+}
+@media only screen and (min-width: 40em) {
+  .heading--3 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 .heading--light {
   color: #fff;
@@ -41,8 +59,14 @@ body {
   line-height: 1.1875rem;
 }
 .subhead--2 {
-  font-size: 0.8125rem;
-  line-height: 1rem;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+}
+@media only screen and (min-width: 40em) {
+  .subhead--2 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
 }
 
 .link {
@@ -55,10 +79,16 @@ body {
 }
 .link--1 {
   font-weight: bold;
-  font-size: 0.75rem;
-  line-height: 0.9375rem;
+  font-size: 0.5625rem;
+  line-height: 0.6875rem;
   letter-spacing: 2.57143px;
   text-decoration: none;
+}
+@media only screen and (min-width: 40em) {
+  .link--1 {
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+  }
 }
 .link--2 {
   font-weight: bold;
@@ -84,6 +114,11 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 .sr-only {
@@ -144,6 +179,16 @@ body {
   align-items: center;
   border-bottom: 1px solid #e5e5e5;
 }
+.header__logo {
+  display: block;
+  width: 7.0625rem;
+}
+@media only screen and (min-width: 67.5em) {
+  .header__logo {
+    width: 10.625rem;
+  }
+}
+
 .grid-item {
   float: left;
   max-width: 20.4375rem;
@@ -161,6 +206,12 @@ body {
     max-width: 19.375rem;
   }
 }
+.grid-item__link {
+  transition: 150ms all ease-in-out;
+}
+.grid-item__link:hover {
+  opacity: 0.75;
+}
 .grid-item__text {
   position: absolute;
   padding: 32px;
@@ -168,14 +219,46 @@ body {
   bottom: 0;
   left: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.841672) 100%);
+  z-index: 10;
 }
 .grid-item__image {
   max-width: 100%;
   height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 5;
 }
 
 .clear {
   clear: both;
+}
+
+.painting-detail {
+  display: grid;
+  grid-template-columns: minmax(1rem, 1fr) 4fr 12fr 3fr;
+  grid-template-rows: minmax(14.375rem, auto) auto 1fr;
+}
+.painting-detail__image {
+  max-width: 100%;
+  height: auto;
+  grid-column: 1/5;
+  grid-row: 1/4;
+}
+.painting-detail__name-author {
+  background-color: white;
+  height: auto;
+  grid-column: 1/4;
+  grid-row: 2/4;
+  padding: 1.5rem;
+}
+.painting-detail__name-author .subhead--1 {
+  color: #7d7d7d;
+}
+.painting-detail__artist {
+  grid-column: 2;
+  grid-row: 4;
+  width: 4rem;
 }
 
 /*# sourceMappingURL=style.css.map */
