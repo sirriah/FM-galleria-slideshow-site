@@ -15,42 +15,48 @@
     <title>Frontend Mentor | Galleria slideshow site</title>
 </head>
 <body>
-    <header class="header container--block container--inline">
+    <header class="header container container--block container--inline">
         <a href="#"><span class="sr-only">Galleria - Homepage</span><img class="header__logo" src="./assets/shared/logo.svg" alt=""></a>
         <a class="link link--1" href="#">Start slideshow</a>
       </div>
     </header>
-    <main class="container--block container--inline">
+    <main class="main--detail container container--block container--inline">
       <div class="painting-detail">
-        <img class="painting-detail__image" src="./assets/starry-night/hero-small.jpg" alt="" srcset="">
-        <div class="painting-detail__name-author">
-          <h1 class="heading heading--1">Starry Night</h1>
-          <h2 class="subhead subhead--1">Vincent Van Gogh</h2>
+        <img class="painting-detail__image" src="./assets/starry-night/hero-small.jpg" alt="" srcset="./assets/starry-night/hero-small.jpg 600w, ./assets/starry-night/hero-large.jpg 1440w">
+        <div class="painting-detail__wrapper">
+          <div class="painting-detail__name-author">
+            <h1 class="heading heading--1 painting-detail__name">Penitent Magdalene</h1>
+            <h2 class="subhead subhead--1">Vincent Van Gogh</h2>
+          </div>
+          <img class="painting-detail__artist" src="./assets/starry-night/artist.jpg" alt="" srcset="">
+          
         </div>
-        <img class="painting-detail__artist" src="./assets/starry-night/artist.jpg" alt="" srcset="">
         
       </div>
-      <div>
-        <p class="heading--display">1889</p>
-        <p class="paragraph">
-          Although The Starry Night was painted during the day in Van Gogh's 
-          ground-floor studio, it would be inaccurate to state that the picture
-          was painted from memory. The view has been identified as the one from 
-          his bedroom window, facing east, a view which Van Gogh painted
-          variations of no fewer than twenty-one times, including The Starry Night. 
-          "Through the iron-barred window," he wrote to his brother, Theo, 
-          around 23 May 1889, "I can see an enclosed square of wheat 
-          ... above which, in the morning, I watch the sun rise in all its glory."
-        </p>
-  
+      <div class="description">
+        <p class="description__year heading heading--display">1889</p>
+        <div class="description__text">
+          <p class="paragraph">
+            Although The Starry Night was painted during the day in Van Gogh's 
+            ground-floor studio, it would be inaccurate to state that the picture
+            was painted from memory. The view has been identified as the one from 
+            his bedroom window, facing east, a view which Van Gogh painted
+            variations of no fewer than twenty-one times, including The Starry Night. 
+            "Through the iron-barred window," he wrote to his brother, Theo, 
+            around 23 May 1889, "I can see an enclosed square of wheat 
+            ... above which, in the morning, I watch the sun rise in all its glory."
+          </p>
+          <a class="link link--2" href="#">Go to source</a>
+        </div>
+        
       </div>
       
-      <a class="link link--2" href="#">Go to source</a>
+      
     </main>
-    <footer class="footer">
+    <footer class="footer container--inline container">
       <div class="footer__image-details">
-        <h3 class="heading--3">Starry night</h3>
-        <h4 class="subhead--2">Vincent Van Gogh</h4>
+        <h3 class="heading heading--3">Starry night</h3>
+        <h4 class="subhead subhead--2">Vincent Van Gogh</h4>
       </div>
       <div class="footer__buttons">
         <button class="button button--arrow"><svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><g stroke="#000" fill="none" fill-rule="evenodd"><path d="M24.166 1.843L3.627 12.113l20.539 10.269V1.843z" stroke-width="2"/><path fill="#D8D8D8" d="M.986.5h-1v22.775h1z"/></g></svg></button>

@@ -12,6 +12,7 @@ body {
   margin-block: 0.5rem;
 
   &--display {
+    margin: 0;
     font-size: abstracts.toRem(100);
     line-height: abstracts.toRem(100);
     color: color.$neutral-100;
@@ -57,11 +58,13 @@ body {
 .subhead {
   margin-block: 0rem;
   color: color.$neutral-900;
+  font-weight: normal;
 
   // same for all views
   &--1 {
     font-size: abstracts.toRem(15);
     line-height: abstracts.toRem(19);
+    
   }
 
   &--2 {
@@ -106,10 +109,11 @@ body {
 }
 
 .paragraph {
-  font-weight: bold;
+  font-weight: normal;
   font-size: abstracts.toRem(14);
   line-height: abstracts.toRem(28);
   color: color.$neutral-500;
+  margin-bottom: abstracts.toRem(40);
 }
 
 .white{

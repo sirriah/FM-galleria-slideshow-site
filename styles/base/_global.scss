@@ -20,6 +20,10 @@ html, body{
 }
 
 .container{
+    @include abstracts.breakpoint-up(large){
+        margin: 0 auto;
+        max-width: abstracts.toRem(1440);
+    }
 
     &--inline{
         padding-inline: 1.5rem;
@@ -38,8 +42,8 @@ html, body{
 
         @include abstracts.breakpoint-up(large){
             padding-block: 2.5rem;
-            max-width: abstracts.toRem(1440);
-            margin: 0 auto;
+            
+           
         }
     
     }

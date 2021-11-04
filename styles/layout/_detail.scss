@@ -1,33 +1,136 @@
-@use '../abstracts';
-@use '../base';
+@use "../abstracts";
+@use "../base";
 
-.painting-detail{
-    display: grid;
-    grid-template-columns: minmax(1rem, 1fr) 4fr 12fr 3fr;
-    grid-template-rows: minmax(abstracts.toRem(230), auto) auto 1fr;
+.main--detail {
+    @include abstracts.breakpoint-up(large) {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: abstracts.toRem(100);
+    }
+}
 
-    &__image{
-        max-width: 100%;
-        height: auto;
-        grid-column: 1 / 5;
-        grid-row: 1/4;
+.painting-detail {
+    position: relative;
+
+    @include abstracts.breakpoint-up(large) {
+        width: max(856px, 60%);
     }
 
-    &__name-author{
-        background-color: white;
-        height: auto;
-        grid-column: 1/4;
-        grid-row: 2/4;
-        padding: abstracts.toRem(24);
+    &__image {
+        max-width: 100%;
+        z-index: 10;
 
-        .subhead--1{
+        @include abstracts.breakpoint-up(medium) {
+            max-width: abstracts.toRem(475);
+            height: auto;
+        }
+    }
+
+    &__wrapper {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(60%);
+        width: 90%;
+
+        @include abstracts.breakpoint-up(medium) {
+            bottom: unset;
+            top: 0;
+            right: 0;
+            transform: unset;
+            max-width: abstracts.toRem(445);
+        }
+    }
+
+    &__name-author {
+        padding: abstracts.toRem(24);
+        background-color: white;
+        display: block;
+        z-index: 20;
+
+        @include abstracts.breakpoint-up(medium) {
+            box-sizing: border-box;
+            padding: 0.5rem 4rem 4rem;
+        }
+
+        .subhead--1 {
             color: base.$neutral-500;
         }
     }
 
-    &__artist{
-        grid-column: 2;
-        grid-row: 4;
+    &__name {
+        position: relative;
+        z-index: 35;
+    }
+
+    &__artist {
+        margin-left: 1rem;
         width: abstracts.toRem(64);
+        z-index: 20;
+
+        @include abstracts.breakpoint-up(medium) {
+            width: abstracts.toRem(128);
+            float: right;
+            margin-right: 2rem;
+        }
+
+        @include abstracts.breakpoint-up(large) {
+            margin-left: 0;
+            margin-right: 0;
+            position: absolute;
+            bottom: 0px;
+            transform: translate(94px, abstracts.toRem(386));
+        }
+    }
+}
+
+.description {
+    padding-top: abstracts.toRem(150);
+    position: relative;
+
+    @include abstracts.breakpoint-up(medium) {
+      padding-top: 0;  
+    }
+
+    @include abstracts.breakpoint-up(large) {
+        width: abstracts.toRem(476);
+    }
+
+    &__year {
+        position: absolute;
+        top: abstracts.toRem(90);
+        right: 0;
+        z-index: 30;
+
+        @include abstracts.breakpoint-up(medium) {
+        
+            top: abstracts.toRem(64);
+            left: 0;
+            right: unset;
+        }
+
+        @include abstracts.breakpoint-up(large) {
+            left: unset;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    &__text {
+        padding-bottom: abstracts.toRem(68);
+        position: relative;
+        z-index: 40;
+
+        @include abstracts.breakpoint-up(medium) {
+            max-width: abstracts.toRem(457);
+            padding-top: abstracts.toRem(130);
+            margin: 0 auto;
+        }
+
+        @include abstracts.breakpoint-up(large) {
+            max-width: abstracts.toRem(350);
+            margin-left: 0;
+        }
+
     }
 }

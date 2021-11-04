@@ -1,0 +1,19 @@
+@use "../base";
+
+.footer{
+    background-color: white;
+    border-top: 1px solid base.$neutral-200;
+    padding-block: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__buttons{
+        display: flex;
+        gap: 40px
+    }
+
+    .subhead{
+        opacity: 0.75;
+    }
+}

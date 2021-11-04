@@ -8,6 +8,7 @@ body {
   margin-block: 0.5rem;
 }
 .heading--display {
+  margin: 0;
   font-size: 6.25rem;
   line-height: 6.25rem;
   color: #f3f3f3;
@@ -53,6 +54,7 @@ body {
 .subhead {
   margin-block: 0rem;
   color: #000;
+  font-weight: normal;
 }
 .subhead--1 {
   font-size: 0.9375rem;
@@ -99,10 +101,11 @@ body {
 }
 
 .paragraph {
-  font-weight: bold;
+  font-weight: normal;
   font-size: 0.875rem;
   line-height: 1.75rem;
   color: #7d7d7d;
+  margin-bottom: 2.5rem;
 }
 
 .white, .white--opacity {
@@ -131,6 +134,12 @@ html, body {
   overflow: hidden;
 }
 
+@media only screen and (min-width: 67.5em) {
+  .container {
+    margin: 0 auto;
+    max-width: 90rem;
+  }
+}
 .container--inline {
   padding-inline: 1.5rem;
 }
@@ -150,8 +159,6 @@ html, body {
 @media only screen and (min-width: 67.5em) {
   .container--block {
     padding-block: 2.5rem;
-    max-width: 90rem;
-    margin: 0 auto;
   }
 }
 
@@ -234,31 +241,156 @@ html, body {
   clear: both;
 }
 
+@media only screen and (min-width: 67.5em) {
+  .main--detail {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 6.25rem;
+  }
+}
+
 .painting-detail {
-  display: grid;
-  grid-template-columns: minmax(1rem, 1fr) 4fr 12fr 3fr;
-  grid-template-rows: minmax(14.375rem, auto) auto 1fr;
+  position: relative;
+}
+@media only screen and (min-width: 67.5em) {
+  .painting-detail {
+    width: max(856px, 60%);
+  }
 }
 .painting-detail__image {
   max-width: 100%;
-  height: auto;
-  grid-column: 1/5;
-  grid-row: 1/4;
+  z-index: 10;
+}
+@media only screen and (min-width: 40em) {
+  .painting-detail__image {
+    max-width: 29.6875rem;
+    height: auto;
+  }
+}
+.painting-detail__wrapper {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(60%);
+  width: 90%;
+}
+@media only screen and (min-width: 40em) {
+  .painting-detail__wrapper {
+    bottom: unset;
+    top: 0;
+    right: 0;
+    transform: unset;
+    max-width: 27.8125rem;
+  }
 }
 .painting-detail__name-author {
-  background-color: white;
-  height: auto;
-  grid-column: 1/4;
-  grid-row: 2/4;
   padding: 1.5rem;
+  background-color: white;
+  display: block;
+  z-index: 20;
+}
+@media only screen and (min-width: 40em) {
+  .painting-detail__name-author {
+    box-sizing: border-box;
+    padding: 0.5rem 4rem 4rem;
+  }
 }
 .painting-detail__name-author .subhead--1 {
   color: #7d7d7d;
 }
+.painting-detail__name {
+  position: relative;
+  z-index: 35;
+}
 .painting-detail__artist {
-  grid-column: 2;
-  grid-row: 4;
+  margin-left: 1rem;
   width: 4rem;
+  z-index: 20;
+}
+@media only screen and (min-width: 40em) {
+  .painting-detail__artist {
+    width: 8rem;
+    float: right;
+    margin-right: 2rem;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .painting-detail__artist {
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
+    bottom: 0px;
+    transform: translate(94px, 24.125rem);
+  }
+}
+
+.description {
+  padding-top: 9.375rem;
+  position: relative;
+}
+@media only screen and (min-width: 40em) {
+  .description {
+    padding-top: 0;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .description {
+    width: 29.75rem;
+  }
+}
+.description__year {
+  position: absolute;
+  top: 5.625rem;
+  right: 0;
+  z-index: 30;
+}
+@media only screen and (min-width: 40em) {
+  .description__year {
+    top: 4rem;
+    left: 0;
+    right: unset;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .description__year {
+    left: unset;
+    right: 0;
+    top: 0;
+  }
+}
+.description__text {
+  padding-bottom: 4.25rem;
+  position: relative;
+  z-index: 40;
+}
+@media only screen and (min-width: 40em) {
+  .description__text {
+    max-width: 28.5625rem;
+    padding-top: 8.125rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .description__text {
+    max-width: 21.875rem;
+    margin-left: 0;
+  }
+}
+
+.footer {
+  background-color: white;
+  border-top: 1px solid #e5e5e5;
+  padding-block: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__buttons {
+  display: flex;
+  gap: 40px;
+}
+.footer .subhead {
+  opacity: 0.75;
 }
 
 /*# sourceMappingURL=style.css.map */
