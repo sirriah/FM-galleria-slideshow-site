@@ -323,6 +323,11 @@ html, body {
     transform: translate(94px, 24.125rem);
   }
 }
+.painting-detail__view-image {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 1rem;
+}
 
 .description {
   padding-top: 9.375rem;

@@ -72,6 +72,7 @@
             width: abstracts.toRem(128);
             float: right;
             margin-right: 2rem;
+            
         }
 
         @include abstracts.breakpoint-up(large) {
@@ -81,6 +82,12 @@
             bottom: 0px;
             transform: translate(94px, abstracts.toRem(386));
         }
+    }
+
+    &__view-image {
+        background-color: rgba(0, 0, 0, 0.75);
+        color: base.$light;
+        padding: 1rem;
     }
 }
 
