@@ -10,4 +10,6 @@ const macyInstance = Macy({
     840: 2,
     600: 1,
   },
+  waitForImages: true,
+
 });
