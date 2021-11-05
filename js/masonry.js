@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-undef
-/* 
+/*
 const paintings = document.querySelectorAll('.grid-item__image');
 // eslint-disable-next-line no-undef
 imagesLoaded(paintings, () => { console.log('images are loaded'); });
@@ -13,10 +13,7 @@ let msnry = new Masonry(elem, {
   gutter: 20,
 }); */
 
-
-
-
-/* 
+/*
 // eslint-disable-next-line no-undef
 document.addEventListener('DOMContentLoaded', (event) => {
   console.log('all loaded dom content');
@@ -31,9 +28,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 });
  */
-
-
-
 
 /*
 const macyInstance = Macy({

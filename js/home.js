@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 const grid = document.getElementById('grid');
 
 const paintingsStorage = window.sessionStorage;
@@ -20,10 +22,11 @@ const displayData = (data) => {
     paintingsStorage.setItem(index, JSON.stringify(element));
   });
 
-  // masonry snippet
-  const $grid = $('.grid').imagesLoaded(() => {
-    // init Masonry after all images have loaded
-    $grid.masonry({
+  // masonry snippet with the images loaded helper script
+  imagesLoaded('.grid', () => {
+    const elem = document.querySelector('.grid');
+    const msnry = new Masonry(elem, {
+      // options
       itemSelector: '.grid-item',
       columnWidth: 160,
       gutter: 10,

@@ -285,7 +285,7 @@ html, body {
 }
 .painting-detail__name-author {
   padding: 1.5rem;
-  background-color: white;
+  background-color: beige;
   display: block;
   z-index: 20;
 }
