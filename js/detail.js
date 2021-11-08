@@ -19,11 +19,11 @@ const paintingData = JSON.parse(paintingsStorage.getItem(parameter));
 // Template literals for the main tag and for the footer tag
 const paintingDetailTemplateMain = `
 <div class="painting-detail">
-  <div>
-    <div class="painting-detail__view-image">
+  <div class="painting-detail__image-wrapper">
+    <button class="painting-detail__view-image" id="viewImage">
       <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="nonzero"><path d="M7.714 0l1.5 1.5-2.357 2.357 1.286 1.286L10.5 2.786l1.5 1.5V0zM3.857 6.857L1.5 9.214 0 7.714V12h4.286l-1.5-1.5 2.357-2.357zM8.143 6.857L6.857 8.143 9.214 10.5l-1.5 1.5H12V7.714l-1.5 1.5zM4.286 0H0v4.286l1.5-1.5 2.357 2.357 1.286-1.286L2.786 1.5z"/></g></svg>
-      <span>View image</span>
-    </div>
+      <span>View image<span>
+    </button>
     <img class="painting-detail__image" src="${paintingData.images.hero.small}" alt="" srcset="${paintingData.images.hero.small} 600w, ${paintingData.images.hero.large} 1440w">
   </div>
   <div class="painting-detail__wrapper">
@@ -59,3 +59,19 @@ const paintingDetailTemplateFooter = `
 
 mainTag.innerHTML = paintingDetailTemplateMain;
 footerTag.innerHTML = paintingDetailTemplateFooter;
+
+// Lightbox
+// eslint-disable-next-line no-unused-vars
+const viewImage = document.getElementById('viewImage');
+const lightbox = document.getElementById('lightbox');
+document.getElementById('lightbox__image').src = paintingData.images.gallery;
+
+viewImage.addEventListener('click', () => {
+  lightbox.classList.remove('hidden');
+});
+
+const closeLightbox = document.getElementById('closeLightbox');
+
+closeLightbox.addEventListener('click', () => {
+  lightbox.classList.add('hidden');
+});

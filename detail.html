@@ -14,7 +14,7 @@
     />
     <title>Frontend Mentor | Galleria slideshow site</title>
 </head>
-<body>
+<body id="body">
     <header class="header container container--block container--inline">
         <a href="index.html"><span class="sr-only">Galleria - Homepage</span><img class="header__logo" src="./assets/shared/logo.svg" alt=""></a>
         <a class="link link--1" href="#">Start slideshow</a>
@@ -26,6 +26,15 @@
     <footer class="footer container--inline container" id="footer">
       <!-- the content is in the js/detail.js in template literal --> 
     </footer>
+
+    <div class="lightbox hidden" id="lightbox">
+      <div class="lightbox__image-wrapper">
+        <button class="lightbox__close" id="closeLightbox">Close</button>
+        <img id="lightbox__image" src="" alt="">
+      </div>
+    </div>
+    
 <script src="./js/detail.js"></script>
+
 </body>
 </html>

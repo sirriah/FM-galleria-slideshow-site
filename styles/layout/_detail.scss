@@ -44,13 +44,14 @@
 
     &__name-author {
         padding: abstracts.toRem(24);
-        background-color: beige;
+        // background-color: base.$light;
+        background-color: white;
         display: block;
         z-index: 20;
 
         @include abstracts.breakpoint-up(medium) {
             box-sizing: border-box;
-            padding: 0.5rem 4rem 4rem;
+            padding: 0.5rem 0.5rem 4rem 4rem;
         }
 
         .subhead--1 {
@@ -84,10 +85,43 @@
         }
     }
 
+    &__image-wrapper{
+        position: relative;
+        
+    }
+
     &__view-image {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+
+        display: flex;
+        align-items: center;
+        padding: 0.8rem;
+        cursor: pointer;
+
+        text-transform: uppercase;
+        letter-spacing: 2.14286px;
+        font-size: abstracts.toRem(10);
+        font-family: 'Libre Baskerville';
+
         background-color: rgba(0, 0, 0, 0.75);
         color: base.$light;
-        padding: 1rem;
+        border: none;
+        
+        &:hover{
+            transition: 250ms all ease-in-out;
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        > span {
+            padding-left: 1rem;
+        }
+
+        @include abstracts.breakpoint-up(medium){
+            top: unset;
+            bottom: 1rem;
+        }
     }
 }
 

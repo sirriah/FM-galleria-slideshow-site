@@ -22,6 +22,19 @@ const displayData = (data) => {
     paintingsStorage.setItem(index, JSON.stringify(element));
   });
 
+  const macyInstance = Macy({
+    // See below for all available options.
+    container: '.grid',
+    columns: 4,
+    margin: 40,
+    breakAt: {
+      1100: 3,
+      840: 2,
+      600: 1,
+    },
+    waitForImages: true,
+  });
+/*
   // masonry snippet with the images loaded helper script
   imagesLoaded('.grid', () => {
     const elem = document.querySelector('.grid');
@@ -31,7 +44,7 @@ const displayData = (data) => {
       columnWidth: 160,
       gutter: 10,
     });
-  });
+  }); */
 };
 
 /* the json data about paintings are fetched via fetch method from the localhost,

@@ -285,14 +285,14 @@ html, body {
 }
 .painting-detail__name-author {
   padding: 1.5rem;
-  background-color: beige;
+  background-color: white;
   display: block;
   z-index: 20;
 }
 @media only screen and (min-width: 40em) {
   .painting-detail__name-author {
     box-sizing: border-box;
-    padding: 0.5rem 4rem 4rem;
+    padding: 0.5rem 0.5rem 4rem 4rem;
   }
 }
 .painting-detail__name-author .subhead--1 {
@@ -323,10 +323,37 @@ html, body {
     transform: translate(94px, 24.125rem);
   }
 }
+.painting-detail__image-wrapper {
+  position: relative;
+}
 .painting-detail__view-image {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2.14286px;
+  font-size: 0.625rem;
+  font-family: "Libre Baskerville";
   background-color: rgba(0, 0, 0, 0.75);
   color: #fff;
-  padding: 1rem;
+  border: none;
+}
+.painting-detail__view-image:hover {
+  transition: 250ms all ease-in-out;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.painting-detail__view-image > span {
+  padding-left: 1rem;
+}
+@media only screen and (min-width: 40em) {
+  .painting-detail__view-image {
+    top: unset;
+    bottom: 1rem;
+  }
 }
 
 .description {
@@ -396,6 +423,43 @@ html, body {
 }
 .footer .subhead {
   opacity: 0.75;
+}
+
+.lightbox {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox__image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+}
+.lightbox__close {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.875rem;
+  font-family: "Libre Baskerville";
+  background-color: transparent;
+  border: none;
+  display: block;
+  cursor: pointer;
+}
+.lightbox__close:hover {
+  color: silver;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
