@@ -14,11 +14,13 @@
     align-items: center;
     justify-content: center;
 
+
     &__image-wrapper{
         display: flex;
         flex-direction: column;
-        align-items: right;
+        align-items: flex-end;
     }
+
 
     &__close {
         color: white;
@@ -28,12 +30,20 @@
         font-family: 'Libre Baskerville';
         background-color: transparent;
         border: none;
-        display: block;
         cursor: pointer;
+        padding-bottom: abstracts.toRem(33);
+
+        @include abstracts.breakpoint-up(medium){
+            padding-bottom: abstracts.toRem(41);
+        }
 
         &:hover{
             color: silver;
         }
+    }
+
+    &__image{
+        max-width: 100%;
     }
 }
 

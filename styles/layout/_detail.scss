@@ -12,9 +12,20 @@
 
 .painting-detail {
     position: relative;
+    z-index: 35;
 
     @include abstracts.breakpoint-up(large) {
         width: max(856px, 60%);
+        z-index: 10;
+    }
+
+     &__wrapper{
+        position: relative;
+    }
+
+    &__image-wrapper{
+        position: relative;
+        
     }
 
     &__image {
@@ -25,69 +36,6 @@
             max-width: abstracts.toRem(475);
             height: auto;
         }
-    }
-
-    &__wrapper {
-        position: absolute;
-        bottom: 0;
-        transform: translateY(60%);
-        width: 90%;
-
-        @include abstracts.breakpoint-up(medium) {
-            bottom: unset;
-            top: 0;
-            right: 0;
-            transform: unset;
-            max-width: abstracts.toRem(445);
-        }
-    }
-
-    &__name-author {
-        padding: abstracts.toRem(24);
-        // background-color: base.$light;
-        background-color: white;
-        display: block;
-        z-index: 20;
-
-        @include abstracts.breakpoint-up(medium) {
-            box-sizing: border-box;
-            padding: 0.5rem 0.5rem 4rem 4rem;
-        }
-
-        .subhead--1 {
-            color: base.$neutral-500;
-        }
-    }
-
-    &__name {
-        position: relative;
-        z-index: 35;
-    }
-
-    &__artist {
-        margin-left: 1rem;
-        width: abstracts.toRem(64);
-        z-index: 20;
-
-        @include abstracts.breakpoint-up(medium) {
-            width: abstracts.toRem(128);
-            float: right;
-            margin-right: 2rem;
-            
-        }
-
-        @include abstracts.breakpoint-up(large) {
-            margin-left: 0;
-            margin-right: 0;
-            position: absolute;
-            bottom: 0px;
-            transform: translate(94px, abstracts.toRem(386));
-        }
-    }
-
-    &__image-wrapper{
-        position: relative;
-        
     }
 
     &__view-image {
@@ -123,6 +71,73 @@
             bottom: 1rem;
         }
     }
+
+    
+
+    &__headline-wrapper {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(60%);
+        width: 90%;
+
+        @include abstracts.breakpoint-up(medium) {
+            bottom: unset;
+            top: 0;
+            right: 0;
+            transform: unset;
+            max-width: abstracts.toRem(445);
+        }
+
+        @include abstracts.breakpoint-up(large){
+            height: 100%;
+        }
+    }
+
+    &__name-author {
+        padding: abstracts.toRem(24);
+        // background-color: base.$light;
+        background-color: white;
+        display: block;
+        z-index: 35;
+
+        @include abstracts.breakpoint-up(medium) {
+            box-sizing: border-box;
+            padding: 0.5rem 0.5rem 4rem 4rem;
+        }
+
+        .subhead--1 {
+            color: base.$neutral-500;
+        }
+    }
+
+    &__name {
+        position: relative;
+        z-index: 35;
+    }
+
+    &__artist {
+        position: relative;
+        margin-left: 1rem;
+        width: abstracts.toRem(64);
+        z-index: 35;
+
+        @include abstracts.breakpoint-up(medium) {
+            width: abstracts.toRem(128);
+            float: right;
+            margin-right: 2rem;
+            
+        }
+
+        @include abstracts.breakpoint-up(large) {
+            margin-left: abstracts.toRem(100);
+            margin-right: 0;
+            position: absolute;
+            bottom: 0px;
+            transform: translateY(50%);
+        }
+    }
+
+    
 }
 
 .description {

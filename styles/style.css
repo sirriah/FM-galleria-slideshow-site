@@ -124,6 +124,10 @@ html, body {
   padding: 0;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -252,11 +256,19 @@ html, body {
 
 .painting-detail {
   position: relative;
+  z-index: 35;
 }
 @media only screen and (min-width: 67.5em) {
   .painting-detail {
     width: max(856px, 60%);
+    z-index: 10;
   }
+}
+.painting-detail__wrapper {
+  position: relative;
+}
+.painting-detail__image-wrapper {
+  position: relative;
 }
 .painting-detail__image {
   max-width: 100%;
@@ -267,64 +279,6 @@ html, body {
     max-width: 29.6875rem;
     height: auto;
   }
-}
-.painting-detail__wrapper {
-  position: absolute;
-  bottom: 0;
-  transform: translateY(60%);
-  width: 90%;
-}
-@media only screen and (min-width: 40em) {
-  .painting-detail__wrapper {
-    bottom: unset;
-    top: 0;
-    right: 0;
-    transform: unset;
-    max-width: 27.8125rem;
-  }
-}
-.painting-detail__name-author {
-  padding: 1.5rem;
-  background-color: white;
-  display: block;
-  z-index: 20;
-}
-@media only screen and (min-width: 40em) {
-  .painting-detail__name-author {
-    box-sizing: border-box;
-    padding: 0.5rem 0.5rem 4rem 4rem;
-  }
-}
-.painting-detail__name-author .subhead--1 {
-  color: #7d7d7d;
-}
-.painting-detail__name {
-  position: relative;
-  z-index: 35;
-}
-.painting-detail__artist {
-  margin-left: 1rem;
-  width: 4rem;
-  z-index: 20;
-}
-@media only screen and (min-width: 40em) {
-  .painting-detail__artist {
-    width: 8rem;
-    float: right;
-    margin-right: 2rem;
-  }
-}
-@media only screen and (min-width: 67.5em) {
-  .painting-detail__artist {
-    margin-left: 0;
-    margin-right: 0;
-    position: absolute;
-    bottom: 0px;
-    transform: translate(94px, 24.125rem);
-  }
-}
-.painting-detail__image-wrapper {
-  position: relative;
 }
 .painting-detail__view-image {
   position: absolute;
@@ -353,6 +307,67 @@ html, body {
   .painting-detail__view-image {
     top: unset;
     bottom: 1rem;
+  }
+}
+.painting-detail__headline-wrapper {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(60%);
+  width: 90%;
+}
+@media only screen and (min-width: 40em) {
+  .painting-detail__headline-wrapper {
+    bottom: unset;
+    top: 0;
+    right: 0;
+    transform: unset;
+    max-width: 27.8125rem;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .painting-detail__headline-wrapper {
+    height: 100%;
+  }
+}
+.painting-detail__name-author {
+  padding: 1.5rem;
+  background-color: white;
+  display: block;
+  z-index: 35;
+}
+@media only screen and (min-width: 40em) {
+  .painting-detail__name-author {
+    box-sizing: border-box;
+    padding: 0.5rem 0.5rem 4rem 4rem;
+  }
+}
+.painting-detail__name-author .subhead--1 {
+  color: #7d7d7d;
+}
+.painting-detail__name {
+  position: relative;
+  z-index: 35;
+}
+.painting-detail__artist {
+  position: relative;
+  margin-left: 1rem;
+  width: 4rem;
+  z-index: 35;
+}
+@media only screen and (min-width: 40em) {
+  .painting-detail__artist {
+    width: 8rem;
+    float: right;
+    margin-right: 2rem;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .painting-detail__artist {
+    margin-left: 6.25rem;
+    margin-right: 0;
+    position: absolute;
+    bottom: 0px;
+    transform: translateY(50%);
   }
 }
 
@@ -411,18 +426,52 @@ html, body {
 
 .footer {
   background-color: white;
-  border-top: 1px solid #e5e5e5;
-  padding-block: 1.3rem;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+.footer__navigation {
+  width: 100%;
+  padding-block: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (min-width: 40em) {
+  .footer__navigation {
+    padding-block: 1.3rem;
+  }
+}
 .footer__buttons {
   display: flex;
-  gap: 40px;
+  gap: 20px;
+}
+@media only screen and (min-width: 40em) {
+  .footer__buttons {
+    gap: 40px;
+  }
+}
+.footer__buttons svg {
+  scale: 0.75;
+}
+@media only screen and (min-width: 40em) {
+  .footer__buttons svg {
+    scale: 1;
+  }
 }
 .footer .subhead {
   opacity: 0.75;
+}
+.footer__meter {
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+.footer__meter--inside {
+  background-color: #000;
+  height: 1px;
 }
 
 .lightbox {
@@ -441,7 +490,7 @@ html, body {
 .lightbox__image-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: right;
+  align-items: flex-end;
 }
 .lightbox__close {
   color: white;
@@ -451,11 +500,19 @@ html, body {
   font-family: "Libre Baskerville";
   background-color: transparent;
   border: none;
-  display: block;
   cursor: pointer;
+  padding-bottom: 2.0625rem;
+}
+@media only screen and (min-width: 40em) {
+  .lightbox__close {
+    padding-bottom: 2.5625rem;
+  }
 }
 .lightbox__close:hover {
   color: silver;
+}
+.lightbox__image {
+  max-width: 100%;
 }
 
 .hidden {

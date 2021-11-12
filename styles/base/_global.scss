@@ -9,6 +9,11 @@ html, body{
     padding: 0;
 }
 
+.no-scroll{
+    overflow: hidden;
+
+}
+
 .sr-only{
     position: absolute;
     width: 1px;

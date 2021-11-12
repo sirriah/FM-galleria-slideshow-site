@@ -1,19 +1,55 @@
 @use "../base";
+@use "../abstracts";
 
-.footer{
+.footer {
     background-color: white;
-    border-top: 1px solid base.$neutral-200;
-    padding-block: 1.3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    &__buttons{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+
+    &__navigation {
+        width: 100%;
+        padding-block: 1rem;
         display: flex;
-        gap: 40px
+        justify-content: space-between;
+        align-items: center;
+
+        @include abstracts.breakpoint-up(medium) {
+            padding-block: 1.3rem;
+        }
     }
 
-    .subhead{
+    &__buttons {
+        display: flex;
+        gap: 20px;
+
+        @include abstracts.breakpoint-up(medium) {
+            gap: 40px;
+        }
+
+        svg {
+            scale: 0.75;
+            @include abstracts.breakpoint-up(medium) {
+                scale: 1;
+            }
+        }
+    }
+
+    .subhead {
         opacity: 0.75;
+    }
+
+    &__meter {
+        width: 100%;
+        height: 1px;
+        background-color: base.$neutral-200;
+
+        &--inside {
+            background-color: base.$neutral-900;
+            height: 1px;
+        }
     }
 }
