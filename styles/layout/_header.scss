@@ -7,10 +7,6 @@
     align-items: center;
     border-bottom: 1px solid base.$neutral-200;
 
-    @include abstracts.breakpoint-up(medium){
-
-    }
-
     &__logo{
         display: block;
         width: abstracts.toRem(113);

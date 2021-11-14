@@ -16,7 +16,7 @@ body {
     font-size: abstracts.toRem(100);
     line-height: abstracts.toRem(100);
     color: color.$neutral-100;
-    @include abstracts.breakpoint-up(medium){
+    @include abstracts.breakpoint-up(medium) {
       font-size: abstracts.toRem(200);
       line-height: abstracts.toRem(150);
     }
@@ -26,10 +26,9 @@ body {
     font-size: abstracts.toRem(24);
     line-height: abstracts.toRem(29);
     color: color.$neutral-900;
-    @include abstracts.breakpoint-up(medium){
+    @include abstracts.breakpoint-up(medium) {
       font-size: abstracts.toRem(56);
       line-height: abstracts.toRem(64);
-     
     }
   }
 
@@ -44,13 +43,13 @@ body {
     font-size: abstracts.toRem(14);
     line-height: abstracts.toRem(17);
     color: color.$neutral-900;
-    @include abstracts.breakpoint-up(medium){
+    @include abstracts.breakpoint-up(medium) {
       font-size: abstracts.toRem(18);
-    line-height: abstracts.toRem(22);
+      line-height: abstracts.toRem(22);
     }
   }
 
-  &--light{
+  &--light {
     color: color.$light;
   }
 }
@@ -64,13 +63,12 @@ body {
   &--1 {
     font-size: abstracts.toRem(15);
     line-height: abstracts.toRem(19);
-    
   }
 
   &--2 {
     font-size: abstracts.toRem(10);
     line-height: abstracts.toRem(12);
-    @include abstracts.breakpoint-up(medium){
+    @include abstracts.breakpoint-up(medium) {
       font-size: abstracts.toRem(13);
       line-height: abstracts.toRem(16);
     }
@@ -81,8 +79,8 @@ body {
   color: color.$neutral-500;
   text-transform: uppercase;
   transition: 150ms all ease-in-out;
-  
-  &:hover{
+
+  &:hover {
     color: color.$neutral-900;
   }
 
@@ -93,9 +91,9 @@ body {
     letter-spacing: 2.57143px;
     text-decoration: none;
 
-    @include abstracts.breakpoint-up(medium){
+    @include abstracts.breakpoint-up(medium) {
       font-size: abstracts.toRem(12);
-    line-height: abstracts.toRem(15);
+      line-height: abstracts.toRem(15);
     }
   }
 
@@ -116,12 +114,11 @@ body {
   margin-bottom: abstracts.toRem(40);
 }
 
-.white{
+.white {
   color: color.$light;
 
-  &--opacity{
+  &--opacity {
     @extend .white;
     opacity: 0.75;
   }
 }
-

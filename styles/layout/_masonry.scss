@@ -1,5 +1,7 @@
 @use "../abstracts";
 
+// design of the one element of the masonry grid
+
 .grid-item {
     float: left;
     max-width: abstracts.toRem(327);

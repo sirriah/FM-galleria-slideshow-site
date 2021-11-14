@@ -2,6 +2,7 @@
 /* eslint-disable no-undef */
 const grid = document.getElementById('grid');
 
+// the paintings details are load from JSON file and saved in the Session Storage
 const paintingsStorage = window.sessionStorage;
 
 /* For each item in the array is called the Template Literal,
@@ -22,8 +23,12 @@ const displayData = (data) => {
     paintingsStorage.setItem(index, JSON.stringify(element));
   });
 
+  // after the template literal is set, design the grid as masonry with macy.js script
+  /*
+    This can not be in the separate file, because there is a problem with the order of the scripts.
+    This function has to be there, after the template literals are set.
+  */
   const macyInstance = Macy({
-    // See below for all available options.
     container: '.grid',
     columns: 4,
     margin: 40,
@@ -34,20 +39,9 @@ const displayData = (data) => {
     },
     waitForImages: true,
   });
-/*
-  // masonry snippet with the images loaded helper script
-  imagesLoaded('.grid', () => {
-    const elem = document.querySelector('.grid');
-    const msnry = new Masonry(elem, {
-      // options
-      itemSelector: '.grid-item',
-      columnWidth: 160,
-      gutter: 10,
-    });
-  }); */
 };
 
-/* the json data about paintings are fetched via fetch method from the localhost,
+/* the json data about paintings are fetched via fetch method from the root directory,
 then is called the displayData function.
 */
 fetch('../data.json')

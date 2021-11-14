@@ -15,17 +15,16 @@
     z-index: 35;
 
     @include abstracts.breakpoint-up(large) {
-        width: max(856px, 60%);
+        width: max(53.5rem, 60%);
         z-index: 10;
     }
 
-     &__wrapper{
+    &__wrapper {
         position: relative;
     }
 
-    &__image-wrapper{
+    &__image-wrapper {
         position: relative;
-        
     }
 
     &__image {
@@ -51,13 +50,13 @@
         text-transform: uppercase;
         letter-spacing: 2.14286px;
         font-size: abstracts.toRem(10);
-        font-family: 'Libre Baskerville';
+        font-family: "Libre Baskerville";
 
         background-color: rgba(0, 0, 0, 0.75);
         color: base.$light;
         border: none;
-        
-        &:hover{
+
+        &:hover {
             transition: 250ms all ease-in-out;
             background-color: rgba(255, 255, 255, 0.25);
         }
@@ -66,13 +65,11 @@
             padding-left: 1rem;
         }
 
-        @include abstracts.breakpoint-up(medium){
+        @include abstracts.breakpoint-up(medium) {
             top: unset;
             bottom: 1rem;
         }
     }
-
-    
 
     &__headline-wrapper {
         position: absolute;
@@ -88,14 +85,13 @@
             max-width: abstracts.toRem(445);
         }
 
-        @include abstracts.breakpoint-up(large){
+        @include abstracts.breakpoint-up(large) {
             height: 100%;
         }
     }
 
     &__name-author {
         padding: abstracts.toRem(24);
-        // background-color: base.$light;
         background-color: white;
         display: block;
         z-index: 35;
@@ -125,7 +121,6 @@
             width: abstracts.toRem(128);
             float: right;
             margin-right: 2rem;
-            
         }
 
         @include abstracts.breakpoint-up(large) {
@@ -136,8 +131,6 @@
             transform: translateY(50%);
         }
     }
-
-    
 }
 
 .description {
@@ -145,7 +138,7 @@
     position: relative;
 
     @include abstracts.breakpoint-up(medium) {
-      padding-top: 0;  
+        padding-top: 0;
     }
 
     @include abstracts.breakpoint-up(large) {
@@ -159,7 +152,6 @@
         z-index: 30;
 
         @include abstracts.breakpoint-up(medium) {
-        
             top: abstracts.toRem(64);
             left: 0;
             right: unset;
@@ -187,6 +179,5 @@
             max-width: abstracts.toRem(350);
             margin-left: 0;
         }
-
     }
 }

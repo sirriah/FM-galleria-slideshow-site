@@ -1,20 +1,22 @@
-@use '../abstracts';
+@use "../abstracts";
 
-*{
+* {
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     margin: 0;
     padding: 0;
 }
 
-.no-scroll{
+// is used with the lightbox
+.no-scroll {
     overflow: hidden;
-
 }
 
-.sr-only{
+// screen reader only
+.sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -24,34 +26,35 @@ html, body{
     overflow: hidden;
 }
 
-.container{
-    @include abstracts.breakpoint-up(large){
+.container {
+    @include abstracts.breakpoint-up(large) {
         margin: 0 auto;
         max-width: abstracts.toRem(1440);
     }
 
-    &--inline{
+    &--inline {
         padding-inline: 1.5rem;
 
-        @include abstracts.breakpoint-up(medium){
+        @include abstracts.breakpoint-up(medium) {
             padding-inline: 2.5rem;
         }
     }
 
-    &--block{
+    &--block {
         padding-block: 1.5rem;
 
-        @include abstracts.breakpoint-up(medium){
+        @include abstracts.breakpoint-up(medium) {
             padding-block: abstracts.toRem(29);
         }
 
-        @include abstracts.breakpoint-up(large){
+        @include abstracts.breakpoint-up(large) {
             padding-block: 2.5rem;
-            
-           
         }
-    
     }
+}
 
-
+// the border for the interactive elements selected with the tab navigation
+:focus,
+:focus-visible {
+    border: 3px dotted blue !important;
 }

@@ -3,7 +3,6 @@
 
 .footer {
     background-color: white;
-
     position: fixed;
     right: 0;
     bottom: 0;
@@ -42,6 +41,7 @@
         opacity: 0.75;
     }
 
+    // the meter is used in the detail page - it changes depending on the order of the painting
     &__meter {
         width: 100%;
         height: 1px;
