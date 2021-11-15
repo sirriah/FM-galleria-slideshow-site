@@ -63,7 +63,9 @@ const paintingDetailTemplateFooter = `
 mainTag.innerHTML = paintingDetailTemplateMain;
 footerTag.innerHTML += paintingDetailTemplateFooter;
 
-// Lightbox
+/* Lightbox
+The code is in the index.html and in the css is set to visibility:hidden
+*/
 const viewImage = document.getElementById('viewImage');
 const lightbox = document.getElementById('lightbox');
 document.getElementById('lightbox__image').src = paintingData.images.gallery;
@@ -80,8 +82,9 @@ closeLightbox.addEventListener('click', () => {
   bodyTag.classList.remove('no-scroll');
 });
 
-// Gradient footer
-
+/*  footer - in the footer is a progress bar, which is made form two divs.
+It displays the "position" in the slideshow of paintings.
+*/
 const footerMeter = document.getElementById('footerMeterInside');
 
 const percentageWidth = ((parameter + 1) / paintingsStorage.length) * 100;

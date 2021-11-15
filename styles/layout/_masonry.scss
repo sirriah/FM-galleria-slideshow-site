@@ -19,6 +19,11 @@
 
     &__link {
         transition: 150ms all ease-in-out;
+        display: block;
+
+        &:focus, &:focus-visible{
+            opacity: 0.75;
+        }
     }
     
     &__link:hover {

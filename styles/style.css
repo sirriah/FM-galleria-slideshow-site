@@ -225,6 +225,10 @@ body {
 }
 .grid-item__link {
   transition: 150ms all ease-in-out;
+  display: block;
+}
+.grid-item__link:focus, .grid-item__link:focus-visible {
+  opacity: 0.75;
 }
 .grid-item__link:hover {
   opacity: 0.75;
