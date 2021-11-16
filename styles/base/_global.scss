@@ -56,6 +56,10 @@ body {
 // the border for the interactive elements selected with the tab navigation
 :focus,
 :focus-visible {
-    border: 3px dotted blue !important;
+    border: 3px dotted #444 !important;
 
+}
+
+.border-transparent{
+        border: 3px solid transparent;
 }

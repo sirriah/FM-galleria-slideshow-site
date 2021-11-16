@@ -169,12 +169,16 @@ body {
 
 :focus,
 :focus-visible {
-  border: 3px dotted blue !important;
+  border: 3px dotted #444 !important;
+}
+
+.border-transparent {
+  border: 3px solid transparent;
 }
 
 .button {
   background-color: transparent;
-  border: none;
+  border-color: transparent;
   cursor: pointer;
 }
 .button--arrow svg g {
