@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/galleria-slideshow-scss-js-macyjs-8VtTUvXNf)
 - Live Site URL: [Vercel](https://fm-galleria-slideshow-site-sirriah.vercel.app)
 
 ## My process
