@@ -68,7 +68,10 @@ The code is in the index.html and in the css is set to visibility:hidden
 */
 const viewImage = document.getElementById('viewImage');
 const lightbox = document.getElementById('lightbox');
-document.getElementById('lightbox__image').src = paintingData.images.gallery;
+
+const lightboxWrapper = document.getElementById('lightboxWrapper');
+const imageTemplate = `<img class="lightbox__image" id="lightbox__image" src="${paintingData.images.gallery}" alt="" />`;
+lightboxWrapper.innerHTML += imageTemplate;
 
 viewImage.addEventListener('click', () => {
   lightbox.classList.remove('hidden');
