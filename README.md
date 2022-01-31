@@ -53,7 +53,7 @@ Users should be able to:
 
 ### What I learned
 
-I have some issues with the masonry script. I do not want to use the `grid-template-rows: masonry`, because the support of this in the browsers is still at the low level. So I used the macy.js script. It works fine, but I could not figured out where should I insert the masonry snippet, because the elements of the grid was inserted with template literals from js file and it caused the problem with the order of scripts and stylesheets. First, I wanted to split it into the two files, but later I put the snippet after the loop of template literals and it works.
+I hade some issues with the masonry script. I did not want to use the `grid-template-rows: masonry`, because the support of this in the browsers is still at the low level. So I used the macy.js script. It works fine, but I could not figured out where should I insert the masonry snippet, because the elements of the grid was inserted with template literals from js file and it caused the problem with the order of scripts and stylesheets. First, I wanted to split it into the two files, but later I put the snippet after the loop of template literals and it works.
 
 I used the "JS-heavy" approach. I fetch the data of all paintings from the JSON files and then I use one html file called "detail.html" where the data are displayed with the template literal which is set in the "detail.js".
 
@@ -62,7 +62,7 @@ I stored the data of all paintings in the sessionStorage, so I cannot fetch the 
 
 ### Continued development
 
-I want to focus on the accessibility with the next project. I try to add some details into this project, but I don't know, if it is correct. I need to study more documentation. 
+I want to focus on the accessibility with the next project. I have tried to add some details into this project, but I don't know, if it is correct. I need to study more documentation. 
 
 
 ### Useful resources
@@ -76,6 +76,6 @@ I want to focus on the accessibility with the next project. I try to add some de
 
 ## Acknowledgments
 
-Many thanks goes to Matt from Frontend Mentor, that he create so amazing platform :)
+Many thanks goes to Matt from Frontend Mentor, for creating so amazing platform :)
 
 
